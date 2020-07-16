@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/command"
+        android:icon="@drawable/command"
+        android:title="추천메뉴"/>
+
+    <item
+        android:id="@+id/category"
+        android:icon="@drawable/category"
+        android:title="카테고리"/>
+
+    <item
+        android:id="@+id/select_disorder"
+        android:icon="@drawable/select_disorder"
+        android:title="선택장애"/>
+
+    <item
+        android:id="@+id/roulette"
+        android:icon="@drawable/roulette"
+        android:title="룰렛"/>
+
+</menu>
