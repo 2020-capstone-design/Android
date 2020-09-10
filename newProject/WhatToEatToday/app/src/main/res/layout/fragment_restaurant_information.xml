@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/info_corner_shape"
+        android:padding="30dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="영업 정보"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TableRow>
+            <TextView
+                style="@style/RestInfoFixedText"
+                android:text="소개" />
+
+            <TextView
+                android:id="@+id/intro"
+                style="@style/RestInfoNoFixedText"
+                android:singleLine="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/RestInfoFixedText"
+                android:text="위치" />
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/RestInfoNoFixedText"
+                android:singleLine="false"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/RestInfoFixedText"
+                android:text="운영시간" />
+
+            <TextView
+                android:id="@+id/operating_time"
+                style="@style/RestInfoNoFixedText" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/RestInfoFixedText"
+                android:text="휴무일" />
+
+            <TextView
+                android:id="@+id/closed_day"
+                style="@style/RestInfoNoFixedText"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                style="@style/RestInfoFixedText"
+                android:text="전화번호" />
+
+            <TextView
+                android:id="@+id/phone_number"
+                style="@style/RestInfoNoFixedText" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</FrameLayout>

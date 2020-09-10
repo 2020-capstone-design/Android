@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_view_block"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginBottom="3dp"
+    android:background="@drawable/rest_corner_shape"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/restaurant_or_menu_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/restaurant_or_menu_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="name area"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nanumsquareroundb"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/restarant_best_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/best" />
+
+            <TextView
+                android:id="@+id/menu_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="우리가게 Best 메뉴!"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/restaurant_best_menu_or_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="메뉴 2개 보여주는 부분"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/nanumsquareroundl"/>
+
+    </LinearLayout>
+
+</LinearLayout>

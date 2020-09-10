@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    tools:context=".menu.fragment.RecommendResult">
+
+    <include
+        android:id="@+id/loading_animation"
+        layout="@layout/loading" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recommend_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:scrollbars="vertical" />
+
+    <include
+        layout="@layout/try_again" />
+
+    <include
+        layout="@layout/not_found" />
+
+
+</LinearLayout>

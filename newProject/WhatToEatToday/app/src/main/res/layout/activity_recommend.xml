@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.fragment.Recommend"
+    android:background="@drawable/recommend_background">
+
+<!--        <nl.dionsegijn.konfetti.KonfettiView-->
+<!--            android:id="@+id/viewKonfetti"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent" />-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="20dp"
+        android:background="@drawable/recommend_background_card"
+        >
+
+        <RelativeLayout
+            android:id="@+id/recommend_text_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메뉴"
+                android:textSize="60dp"
+                android:fontFamily="@font/kccmurukmuruk"
+                android:textColor="#E36D5D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/menu"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="어때요?"
+                android:textSize="38dp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/recommend_food_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/recommend_text_area"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+
+        <Button
+            android:id="@+id/recommend_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recommend_food_img"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_button"
+            android:padding="15dp"
+            android:text="식당 보러가기"
+            android:textSize="30dp"
+            android:textColor="@color/navy"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+
+<!--        <com.scwang.wave.MultiWaveHeader-->
+<!--            android:id="@+id/wave_header"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:scaleY="-1"-->
+<!--            app:mwhCloseColor="#B3DDFF"-->
+<!--            app:mwhStartColor="#7DABD0"-->
+<!--            app:mwhVelocity="1" />-->
+
+</RelativeLayout>
