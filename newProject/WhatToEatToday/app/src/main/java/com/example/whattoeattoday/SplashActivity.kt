@@ -16,8 +16,8 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({ //delay를 위한 handler
             SharedPreference.init(this)
             if (SharedPreference.universalNum != -1) {
-//                startActivity<MainActivity>()
-                startActivity<SelectUniv>()
+                startActivity<MainActivity>()
+//                startActivity<SelectUniv>()
             } else {
                 startActivity<SelectUniv>()
             }

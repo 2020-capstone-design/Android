@@ -11,7 +11,7 @@
     android:orientation="horizontal">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/restaurant_or_menu_image"
+        android:id="@+id/restaurant_logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="20dp" />
@@ -24,7 +24,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/restaurant_or_menu_name"
+            android:id="@+id/restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -41,13 +41,12 @@
             android:layout_marginBottom="10dp">
 
             <ImageView
-                android:id="@+id/restarant_best_image"
+                android:id="@+id/restaurant_best_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/best" />
 
             <TextView
-                android:id="@+id/menu_intro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="우리가게 Best 메뉴!"
@@ -58,7 +57,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/restaurant_best_menu_or_price"
+            android:id="@+id/restaurant_best_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"

@@ -47,7 +47,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/restaurant_best_menu_or_price"
+            android:id="@+id/restaurant_best_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="220dp"

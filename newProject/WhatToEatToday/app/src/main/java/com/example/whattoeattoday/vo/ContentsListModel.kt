@@ -8,23 +8,27 @@ import retrofit2.http.*
 data class ContentsListModel (
     var restaurants: List<Info>,
     var restaurant: Info,
-    var menus: List<Menu>
+    var menus: List<Menu>,
+    var result: List<Info>
 ){
     data class Info(
         var restaurant_name: String,
         var restaurant_category: String,
         var restaurant_university: String,
-        var restaurant_main_menu1: String,
-        var restaurant_main_menu2: String,
+        var restaurant_main_menu: String,
         var restaurant_num: String,
         var restaurant_logo: String,
+        var restaurant_isOpen: Boolean,
 
-        var restaurant_on_off: Boolean,
         var restaurant_phone: String,
         val restaurant_loc: String,
         val restaurant_intro: String,
         val restaurant_operating_time: String,
-        val restaurant_closed_days: String
+        val restaurant_closed_days: String,
+        val restaurant_food_origin: String,
+        var restaurant_outside_image: String,
+        var restaurant_menu_image1: String,
+        var restaurant_menu_image2: String
     )
 
     data class Menu(
@@ -42,9 +46,9 @@ interface Service{
                              @Path("hashtag") hashtag: String): Call<ContentsListModel>
 
     @GET("/v1/restaurant/list_restaurants/{restaurant_university}&{restaurant_category}")
-    fun testRequest1(@Path("restaurant_university") restaurant_university: String,
-                        @Path("restaurant_category") restaurant_category: String): Call<ContentsListModel>
-//
+    fun requestCategoryList(@Path("restaurant_university") restaurant_university: String,
+                            @Path("restaurant_category") restaurant_category: String): Call<ContentsListModel>
+
     @GET("v1/menu/list_menus/{restaurant_num}")
     fun requestMenuList(@Path("restaurant_num") restaurant_num: String): Call<ContentsListModel>
 
@@ -58,7 +62,7 @@ object SearchRetrofit {
     fun getService(): Service = retrofit.create(Service::class.java)
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://192.168.10.74:3000/")
+        .baseUrl("http://192.168.10.68:3000")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

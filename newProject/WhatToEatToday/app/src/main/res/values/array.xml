@@ -145,4 +145,18 @@
         <item>곱창</item>
         <item>토스트</item>
     </array>
+
+    <array name="category_img">
+        <item>@drawable/korean_food_icon</item>
+        <item>@drawable/snack_bar_icon</item>
+        <item>@drawable/chinese_food_icon</item>
+        <item>@drawable/japanese_porkcutlet_icon</item>
+        <item>@drawable/chicken</item>
+        <item>@drawable/pizza</item>
+        <item>@drawable/steamed_tang_icon</item>
+        <item>@drawable/jokbal_bossam_icon</item>
+        <item>@drawable/fastfood</item>
+        <item>@drawable/cafe_dessert_icon</item>
+    </array>
+
 </resources>

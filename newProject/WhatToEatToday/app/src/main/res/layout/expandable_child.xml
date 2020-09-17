@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_view_block"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/menu_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="menu_name"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/nanumsquarebold"/>
+
+        <TextView
+            android:id="@+id/menu_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="menu_introduce"
+            android:textSize="16dp"
+            android:textColor="@color/gray"
+            android:layout_marginBottom="7dp"
+            android:maxLines="3"
+            android:fontFamily="@font/nanumsquarelight"
+            />
+
+
+        <TextView
+            android:id="@+id/menu_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="price"
+            android:textSize="17dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanumsquareregular" />
+
+    </LinearLayout>
+
+</LinearLayout>

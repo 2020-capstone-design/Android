@@ -9,25 +9,25 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whattoeattoday.R
 import com.example.whattoeattoday.vo.ContentsListModel
+import com.facebook.shimmer.ShimmerFrameLayout
 import java.net.URL
 
 class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private val image = itemView.findViewById<ImageView>(R.id.restaurant_or_menu_image)
-    private val bestIcon = itemView.findViewById<ImageView>(R.id.restarant_best_image)
-    private val text1 = itemView.findViewById<TextView>(R.id.restaurant_or_menu_name)
+    val shimmerLayout = itemView.findViewById<ShimmerFrameLayout>(R.id.shimmerFrameLayout)
+    private val image = itemView.findViewById<ImageView>(R.id.restaurant_logo)
+    private val bestIcon = itemView.findViewById<ImageView>(R.id.restaurant_best_image)
+    private val text1 = itemView.findViewById<TextView>(R.id.restaurant_name)
     private val text2 = itemView.findViewById<TextView>(R.id.menu_intro)
-    private val text3 = itemView.findViewById<TextView>(R.id.restaurant_best_menu_or_price)
+    private val text3 = itemView.findViewById<TextView>(R.id.restaurant_best_menu)
     private val restStatus = itemView.findViewById<LinearLayout>(R.id.list_view_block)
 
-
     fun infoBind(list: List<ContentsListModel.Info>) {
-
         text1.text = list[adapterPosition].restaurant_name
         text3.text =
-            list[adapterPosition].restaurant_main_menu1 + ", " + list[position].restaurant_main_menu2
+            list[adapterPosition].restaurant_main_menu
 
-        if (!list[adapterPosition].restaurant_on_off) {
+        if (!list[adapterPosition].restaurant_isOpen) {
             restStatus.setBackgroundColor(Color.LTGRAY)
         }
 
@@ -35,7 +35,7 @@ class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         if (logo != "noImage") {
             val image_task = URLtoBitmapTask().apply {
-                url = URL("http://192.168.10.74:3000${logo}")
+                url = URL("http://192.168.10.68:3000${logo}")
             }
             val bitmap: Bitmap = image_task.execute().get()
 

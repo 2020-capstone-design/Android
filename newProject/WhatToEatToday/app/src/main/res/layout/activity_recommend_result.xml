@@ -8,15 +8,30 @@
     android:orientation="vertical"
     tools:context=".menu.fragment.RecommendResult">
 
-    <include
-        android:id="@+id/loading_animation"
-        layout="@layout/loading" />
 
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/loading_template" />
+            <include layout="@layout/loading_template"/>
+            <include layout="@layout/loading_template"/>
+            <include layout="@layout/loading_template"/>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recommend_result_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="3dp"
         android:scrollbars="vertical" />
 

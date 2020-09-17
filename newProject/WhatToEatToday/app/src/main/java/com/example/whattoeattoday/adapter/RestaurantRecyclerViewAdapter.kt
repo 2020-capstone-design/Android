@@ -15,14 +15,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.whattoeattoday.R
 import com.example.whattoeattoday.menu.fragment.Restaurant
 import com.example.whattoeattoday.vo.ContentsListModel
+import com.facebook.shimmer.ShimmerFrameLayout
+import io.supercharge.shimmerlayout.ShimmerLayout
 import java.net.URL
 
 class RestaurantRecyclerViewAdapter(
     val context: Context,
-    val list: List<ContentsListModel.Info> = listOf()
-) :
+    val list: List<ContentsListModel.Info>) :
     RecyclerView.Adapter<Holder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+
         val view = LayoutInflater.from(context).inflate(R.layout.rest_listview_item, parent, false)
         return Holder(view)
     }
@@ -32,6 +35,7 @@ class RestaurantRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
+
         holder.infoBind(list)
         holder.itemView.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {

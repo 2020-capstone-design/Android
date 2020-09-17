@@ -1,79 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEE">
 
-    <TableLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/info_corner_shape"
-        android:padding="30dp"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="영업 정보"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TableRow>
-            <TextView
-                style="@style/RestInfoFixedText"
-                android:text="소개" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/info_corner_shape"
+                android:padding="30dp">
 
-            <TextView
-                android:id="@+id/intro"
-                style="@style/RestInfoNoFixedText"
-                android:singleLine="false"/>
-        </TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="영업 정보"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-        <TableRow>
-            <TextView
-                style="@style/RestInfoFixedText"
-                android:text="위치" />
+                <TableRow>
 
-            <TextView
-                android:id="@+id/location"
-                style="@style/RestInfoNoFixedText"
-                android:singleLine="false"/>
-        </TableRow>
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="소개" />
 
-        <TableRow>
-            <TextView
-                style="@style/RestInfoFixedText"
-                android:text="운영시간" />
+                    <TextView
+                        android:id="@+id/intro"
+                        style="@style/RestInfoNoFixedText"
+                        android:singleLine="false" />
+                </TableRow>
 
-            <TextView
-                android:id="@+id/operating_time"
-                style="@style/RestInfoNoFixedText" />
-        </TableRow>
+                <TableRow>
 
-        <TableRow>
-            <TextView
-                style="@style/RestInfoFixedText"
-                android:text="휴무일" />
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="위치" />
 
-            <TextView
-                android:id="@+id/closed_day"
-                style="@style/RestInfoNoFixedText"/>
-        </TableRow>
+                    <TextView
+                        android:id="@+id/location"
+                        style="@style/RestInfoNoFixedText"
+                        android:singleLine="false" />
+                </TableRow>
 
-        <TableRow>
-            <TextView
-                style="@style/RestInfoFixedText"
-                android:text="전화번호" />
+                <TableRow>
 
-            <TextView
-                android:id="@+id/phone_number"
-                style="@style/RestInfoNoFixedText" />
-        </TableRow>
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="운영시간" />
 
-    </TableLayout>
+                    <TextView
+                        android:id="@+id/operating_time"
+                        style="@style/RestInfoNoFixedText" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="휴무일" />
+
+                    <TextView
+                        android:id="@+id/closed_day"
+                        style="@style/RestInfoNoFixedText" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="전화번호" />
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        style="@style/RestInfoNoFixedText" />
+                </TableRow>
+
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/info_corner_shape"
+                android:padding="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="이미지"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="가게" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/restaurant_image"
+                        android:layout_margin="15dp"
+                        android:layout_weight="1"
+                        android:maxHeight="200dp"
+                        android:singleLine="false" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/RestInfoFixedText"
+                        android:text="메뉴판" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/restaurant_menu_image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:singleLine="false" />
+
+                    <ImageView
+                        android:id="@+id/restaurant_menu_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        android:singleLine="false" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </FrameLayout>
