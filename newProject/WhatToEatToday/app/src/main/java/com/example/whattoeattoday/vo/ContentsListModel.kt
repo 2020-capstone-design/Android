@@ -41,18 +41,18 @@ data class ContentsListModel (
 
 interface Service{
 
-    @GET("/v1/restaurant/list_recommended_restaurants/{restaurant_university}&{hashtag}")
+    @GET("/restaurant/list_recommended_restaurants/{restaurant_university}&{hashtag}")
     fun requestRecommendList(@Path("restaurant_university") restaurant_university: String,
                              @Path("hashtag") hashtag: String): Call<ContentsListModel>
 
-    @GET("/v1/restaurant/list_restaurants/{restaurant_university}&{restaurant_category}")
+    @GET("/restaurant/list_restaurants/{restaurant_university}&{restaurant_category}")
     fun requestCategoryList(@Path("restaurant_university") restaurant_university: String,
                             @Path("restaurant_category") restaurant_category: String): Call<ContentsListModel>
 
-    @GET("v1/menu/list_menus/{restaurant_num}")
+    @GET("/menu/list_menus/{restaurant_num}")
     fun requestMenuList(@Path("restaurant_num") restaurant_num: String): Call<ContentsListModel>
 
-    @GET("/v1/restaurant/list_restaurant/{restaurant_num}")
+    @GET("/restaurant/list_restaurant/{restaurant_num}")
     fun requestInfoList(@Path("restaurant_num") restaurant_num: String): Call<ContentsListModel>
 
 }
@@ -62,8 +62,12 @@ object SearchRetrofit {
     fun getService(): Service = retrofit.create(Service::class.java)
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl("http://192.168.10.68:3000")
+        .baseUrl(ServerAccess.URL())
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
+}
+
+object ServerAccess {
+    fun URL() = "https://api.todaymenu.tk"
 }

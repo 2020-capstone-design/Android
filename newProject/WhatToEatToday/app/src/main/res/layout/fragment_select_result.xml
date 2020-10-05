@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu.fragment.SelectResult">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="20dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/recommend_background_card"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/recommend_text_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메뉴"
+                android:textSize="50sp"
+                android:fontFamily="@font/kccmurukmuruk"
+                android:textColor="#E36D5D" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/menu"
+                android:fontFamily="@font/nanumsquareroundb"
+                android:text="어때요?"
+                android:textSize="30sp"
+                android:layout_alignBaseline="@id/menu"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/recommend_food_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/recommend_text_area"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+
+
+        <Button
+            android:id="@+id/select_disorder_list"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recommend_food_img"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/rounded_button"
+            android:padding="15dp"
+            android:text="식당 보러가기"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nanumsquareroundeb"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/recommand_button_icon"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>

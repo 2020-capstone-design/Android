@@ -72,6 +72,7 @@ class Restaurant : AppCompatActivity() {
     private fun floatingButton(restPhoneNumber: String?) {
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
             val intent = Intent(Intent.ACTION_DIAL)
+            println("floatingButton tel num : $restPhoneNumber")
             intent.data = Uri.parse("tel:${restPhoneNumber}")
             if (intent.resolveActivity(packageManager) != null) {
                 startActivity(intent)

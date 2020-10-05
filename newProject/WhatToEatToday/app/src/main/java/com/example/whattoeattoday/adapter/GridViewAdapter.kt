@@ -11,7 +11,7 @@ import com.example.whattoeattoday.R
 import kotlinx.android.synthetic.main.gridview_item.view.*
 
 // img_list와 text_list는 메인에서 텍스트와 이미지 각각을 하나씩 받아와서 그리드뷰에 넣어주는 작업
-class GridviewAdapter(val context: Context, val img_list: TypedArray, val text_list: Array<String>) : BaseAdapter() {
+class GridViewAdapter(val context: Context?, private val img_list: TypedArray, private val text_list: Array<String>) : BaseAdapter() {
 
     // 그리드뷰 어댑터 만들기.
     @SuppressLint("ViewHolder")

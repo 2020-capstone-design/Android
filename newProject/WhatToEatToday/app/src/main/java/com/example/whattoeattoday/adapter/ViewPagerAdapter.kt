@@ -14,9 +14,9 @@ class ViewPagerAdapter(private val context: Context?): PagerAdapter() {
     lateinit var layoutInflater : LayoutInflater
 
     val Image = arrayOf(
-        R.drawable.soup,
-        R.drawable.sushi,
-        R.drawable.tteokbokki
+        R.drawable.recommand_soup,
+        R.drawable.recommand_sushi,
+        R.drawable.recommand_tteokbokki
     )
 
     override fun isViewFromObject(view: View, `object`: Any): Boolean {

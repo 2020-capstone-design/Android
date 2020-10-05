@@ -7,7 +7,7 @@ import android.view.MenuItem
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.whattoeattoday.menu.fragment.Category
-import com.example.whattoeattoday.menu.fragment.Recommend
+import com.example.whattoeattoday.menu.fragment.Recommand
 import com.example.whattoeattoday.menu.fragment.Roulette
 import com.example.whattoeattoday.menu.fragment.SelectDisorder
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         val transaction : FragmentTransaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.frameLayout,
-            Recommend()
+            Recommand()
         ).commitAllowingStateLoss()
 
         navigationView.setOnNavigationItemSelectedListener(this)
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         when(menuItem.itemId) {
             R.id.recommend -> transaction.replace(R.id.frameLayout,
-                Recommend()
+                Recommand()
             ).commitAllowingStateLoss()
             R.id.category -> transaction.replace(R.id.frameLayout,
                 Category()

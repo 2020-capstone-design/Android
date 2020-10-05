@@ -3,7 +3,7 @@ package com.example.whattoeattoday.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.example.whattoeattoday.menu.fragment.RestaurantInformation
+import com.example.whattoeattoday.menu.fragment.RecommandRestaurantInformation
 import com.example.whattoeattoday.menu.fragment.RestaurantMenu
 
 class OptionAdapter (fm: FragmentManager, val restNum : String) : FragmentPagerAdapter(fm) {
@@ -13,7 +13,7 @@ class OptionAdapter (fm: FragmentManager, val restNum : String) : FragmentPagerA
                 RestaurantMenu(restNum)
             }
             else -> {
-                RestaurantInformation(restNum)
+                RecommandRestaurantInformation(restNum)
             }
         }
     }

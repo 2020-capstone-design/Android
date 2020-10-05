@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.whattoeattoday.R
 import com.example.whattoeattoday.vo.ContentsListModel
+import com.example.whattoeattoday.vo.ServerAccess
 import com.facebook.shimmer.ShimmerFrameLayout
 import java.net.URL
 
@@ -35,7 +36,7 @@ class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         if (logo != "noImage") {
             val image_task = URLtoBitmapTask().apply {
-                url = URL("http://192.168.10.68:3000${logo}")
+                url = URL("${logo}")
             }
             val bitmap: Bitmap = image_task.execute().get()
 

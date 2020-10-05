@@ -51,8 +51,6 @@ class RestaurantMenu(val restNum: String) : Fragment() {
 
                             val expandableListDetail = HashMap<String, MutableList<ContentsListModel.Menu>>()
 
-
-
                             val menuIntro: MutableSet<String> = mutableSetOf()
                             val mainMenu: MutableList<ContentsListModel.Menu> = ArrayList()
                             val setMenu: MutableList<ContentsListModel.Menu> = ArrayList()

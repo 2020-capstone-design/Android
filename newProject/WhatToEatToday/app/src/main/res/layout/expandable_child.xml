@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="menu_name"
-            android:textSize="18dp"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:layout_marginBottom="5dp"
             android:fontFamily="@font/nanumsquarebold"/>
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="menu_introduce"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textColor="@color/gray"
             android:layout_marginBottom="7dp"
             android:maxLines="3"
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="price"
-            android:textSize="17dp"
+            android:textSize="17sp"
             android:textColor="@color/black"
             android:fontFamily="@font/nanumsquareregular" />
 

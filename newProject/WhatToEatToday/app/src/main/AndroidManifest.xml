@@ -12,11 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".menu.fragment.CategoryItem"></activity>
+        <activity android:name=".menu.fragment.SearchResult"></activity>
+        <activity
+            android:name=".menu.fragment.CategoryRestaurantInformation"
+            android:theme="@style/noActionBar" />
+        <activity
+            android:name=".menu.fragment.CategoryItem"
+            android:theme="@style/noActionBar" />
         <activity
             android:name=".menu.fragment.Restaurant"
             android:theme="@style/noActionBar" />
-        <activity android:name=".menu.fragment.RecommendResult" />
+        <activity android:name=".menu.fragment.RecommandResult" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />

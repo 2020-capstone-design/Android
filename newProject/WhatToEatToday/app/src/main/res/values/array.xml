@@ -51,26 +51,78 @@
         <item>닭갈비</item>
         <item>떡볶이</item>
         <item>국밥</item>
-        <item>뼈해장국</item>
+        <item>해장국</item>
         <item>초밥</item>
         <item>삼겹살</item>
         <item>라멘</item>
         <item>보리밥</item>
         <item>국수</item>
         <item>햄버거</item>
+<!--        10개-->
+        <item>김치찌개</item>
+        <item>육개장</item>
+        <item>설렁탕</item>
+        <item>곰탕</item>
+        <item>떡국</item>
+        <item>회덮밥</item>
+        <item>김치볶음밥</item>
+        <item>오므라이스</item>
+        <item>알밥</item>
+        <item>비빔밥</item>
+<!--        20개-->
+        <item>마라탕</item>
+        <item>짬뽕</item>
+        <item>냉면</item>
+        <item>파스타</item>
+        <item>짜장면</item>
+        <item>치킨</item>
+        <item>피자</item>
+        <item>족발</item>
+        <item>보쌈</item>
+        <item>돈까스</item>
+<!--        30개-->
+        <item>토스트</item>
+
+
     </array>
 
     <array name="recommend_menu_img">
-        <item>@drawable/chicken_ribs</item>
-        <item>@drawable/tteokbokki</item>
-        <item>@drawable/soup</item>
-        <item>@drawable/born_soup</item>
-        <item>@drawable/sushi</item>
-        <item>@drawable/pork_belly</item>
-        <item>@drawable/ramen</item>
-        <item>@drawable/barley_rice</item>
-        <item>@drawable/noodles</item>
-        <item>@drawable/hamburger</item>
+        <item>@drawable/recommand_chicken_ribs</item>
+        <item>@drawable/recommand_tteokbokki</item>
+        <item>@drawable/recommand_soup</item>
+        <item>@drawable/recommand_born_soup</item>
+        <item>@drawable/recommand_sushi</item>
+        <item>@drawable/recommand_pork_belly</item>
+        <item>@drawable/recommand_ramen</item>
+        <item>@drawable/recommand_barley_rice</item>
+        <item>@drawable/recommand_noodles</item>
+        <item>@drawable/recommand_hamburger</item>
+<!--        10개-->
+        <item>@drawable/recommand_kimchi_soup</item>
+        <item>@drawable/recommand_hot_spicy_meat_stew</item>
+        <item>@drawable/recommand_seolleongtang</item>
+        <item>@drawable/recommand_seolleongtang</item>
+        <item>@drawable/recommand_rice_cake_soup</item>
+        <item>@drawable/recommand_raw_fish_bibimbap</item>
+        <item>@drawable/recommand_kimchi_fried_rice</item>
+        <item>@drawable/recommand_omelet_rice</item>
+        <item>@drawable/recommand_albab</item>
+        <item>@drawable/recommand_albab</item>
+<!--        20개-->
+        <item>@drawable/recommand_maratang</item>
+        <item>@drawable/recommand_spicy_seafood_noodles</item>
+        <item>@drawable/recommand_cold_noodles</item>
+        <item>@drawable/recommand_pasta</item>
+        <item>@drawable/recommand_black_bean_souce_noodles</item>
+        <item>@drawable/recommand_chicken</item>
+        <item>@drawable/recommand_pizza</item>
+        <item>@drawable/recommand_jokbal_bossam</item>
+        <item>@drawable/recommand_jokbal_bossam</item>
+        <item>@drawable/recommand_pork_cutlet</item>
+        <!--        30개-->
+        <item>@drawable/recommand_toast</item>
+
+
     </array>
 
     <array name="option">
@@ -78,15 +130,18 @@
         <item>정보</item>
     </array>
 
-
-
-
-
     <array name="select_desorder_result_0">
-        <item>뼈해장국</item>
+        <item>해장국</item>
         <item>김치찌개</item>
         <item>부대찌개</item>
         <item>육개장</item>
+    </array>
+
+    <array name="select_desorder_result_image_0">
+        <item>@drawable/recommand_born_soup</item>
+        <item>@drawable/recommand_kimchi_soup</item>
+        <item>@drawable/recommand_army_soup</item>
+        <item>@drawable/recommand_hot_spicy_meat_stew</item>
     </array>
 
     <array name="select_desorder_result_1">
@@ -96,10 +151,23 @@
         <item>순대국밥</item>
     </array>
 
+    <array name="select_desorder_result_image_1">
+        <item>@drawable/recommand_seolleongtang</item>
+        <item>@drawable/recommand_rice_cake_soup</item>
+        <item>@drawable/recommand_rice_cake_soup</item>
+        <item>@drawable/recommand_soup</item>
+    </array>
+
     <array name="select_desorder_result_2">
         <item>닭갈비</item>
         <item>초밥</item>
         <item>회덮밥</item>
+    </array>
+
+    <array name="select_desorder_result_image_2">
+        <item>@drawable/recommand_chicken_ribs</item>
+        <item>@drawable/recommand_sushi</item>
+        <item>@drawable/recommand_raw_fish_bibimbap</item>
     </array>
 
     <array name="select_desorder_result_3">
@@ -107,7 +175,16 @@
         <item>오므라이스</item>
         <item>알밥</item>
         <item>비빔밥</item>
-        <item>컵</item>
+        <item>보리밥</item>
+        <!--        <item>컵밥</item>-->
+    </array>
+
+    <array name="select_desorder_result_image_3">
+        <item>@drawable/recommand_kimchi_fried_rice</item>
+        <item>@drawable/recommand_omelet_rice</item>
+        <item>@drawable/recommand_albab</item>
+        <item>@drawable/recommand_albab</item>
+        <item>@drawable/recommand_barley_rice</item>
     </array>
 
     <array name="select_desorder_result_4">
@@ -116,6 +193,16 @@
         <item>고기국수</item>
         <item>잔치국수</item>
         <item>우동</item>
+        <item>라멘</item>
+    </array>
+
+    <array name="select_desorder_result_image_4">
+        <item>@drawable/recommand_maratang</item>
+        <item>@drawable/recommand_spicy_seafood_noodles</item>
+        <item>@drawable/recommand_noodles</item>
+        <item>@drawable/recommand_noodles</item>
+        <item>@drawable/recommand_noodles</item>
+        <item>@drawable/recommand_ramen</item>
     </array>
 
     <array name="select_desorder_result_5">
@@ -124,11 +211,24 @@
         <item>콩국수</item>
     </array>
 
+    <array name="select_desorder_result_image_5">
+        <item>@drawable/recommand_cold_noodles</item>
+        <item>@drawable/recommand_cold_buckwheat_noodles</item>
+        <item>@drawable/recommand_bean_soup_noodles</item>
+    </array>
+
     <array name="select_desorder_result_6">
         <item>쫄면</item>
         <item>비빔국수</item>
         <item>파스타</item>
         <item>짜장면</item>
+    </array>
+
+    <array name="select_desorder_result_image_6">
+        <item>@drawable/recommand_jjolmyeon</item>
+        <item>@drawable/recommand_bibim_noodles</item>
+        <item>@drawable/recommand_pasta</item>
+        <item>@drawable/recommand_black_bean_souce_noodles</item>
     </array>
 
     <array name="select_desorder_result_7">
@@ -144,6 +244,21 @@
         <item>돈까스</item>
         <item>곱창</item>
         <item>토스트</item>
+    </array>
+
+    <array name="select_desorder_result_image_7">
+        <item>@drawable/recommand_beef</item>
+        <item>@drawable/recommand_pork_belly</item>
+        <item>@drawable/recommand_rib</item>
+        <item>@drawable/recommand_tteokbokki</item>
+        <item>@drawable/recommand_chicken</item>
+        <item>@drawable/recommand_pizza</item>
+        <item>@drawable/recommand_hamburger</item>
+        <item>@drawable/recommand_jokbal_bossam</item>
+        <item>@drawable/recommand_jokbal_bossam</item>
+        <item>@drawable/recommand_pork_cutlet</item>
+        <item>@drawable/recommand_intestine</item>
+        <item>@drawable/recommand_toast</item>
     </array>
 
     <array name="category_img">

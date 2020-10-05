@@ -30,7 +30,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="영업 정보"
                     android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow>
@@ -55,6 +55,7 @@
                         android:id="@+id/location"
                         style="@style/RestInfoNoFixedText"
                         android:singleLine="false" />
+
                 </TableRow>
 
                 <TableRow>
@@ -105,7 +106,7 @@
                     android:layout_marginBottom="20dp"
                     android:text="이미지"
                     android:textColor="#000000"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TableRow>
@@ -119,10 +120,10 @@
 
                     <ImageView
                         android:id="@+id/restaurant_image"
-                        android:layout_margin="15dp"
-                        android:layout_weight="1"
-                        android:maxHeight="200dp"
-                        android:singleLine="false" />
+                        android:layout_width="300dp"
+                        android:layout_height="200dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="15dp" />
                 </TableRow>
 
                 <TableRow>
@@ -132,21 +133,24 @@
                         android:text="메뉴판" />
                 </TableRow>
 
-                <TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
                     <ImageView
                         android:id="@+id/restaurant_menu_image1"
                         android:layout_width="wrap_content"
-                        android:layout_height="180dp"
-                        android:layout_weight="1"
-                        android:singleLine="false" />
+                        android:layout_height="150dp" />
+
+                </TableRow>
+
+                <TableRow>
 
                     <ImageView
                         android:id="@+id/restaurant_menu_image2"
                         android:layout_width="wrap_content"
-                        android:layout_height="180dp"
-                        android:layout_weight="1"
-                        android:singleLine="false" />
+                        android:layout_height="150dp" />
+
                 </TableRow>
             </TableLayout>
 
