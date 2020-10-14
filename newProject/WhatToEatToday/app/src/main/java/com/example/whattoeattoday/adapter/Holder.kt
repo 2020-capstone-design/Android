@@ -15,7 +15,6 @@ import java.net.URL
 
 class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    val shimmerLayout = itemView.findViewById<ShimmerFrameLayout>(R.id.shimmerFrameLayout)
     private val image = itemView.findViewById<ImageView>(R.id.restaurant_logo)
     private val bestIcon = itemView.findViewById<ImageView>(R.id.restaurant_best_image)
     private val text1 = itemView.findViewById<TextView>(R.id.restaurant_name)
@@ -25,8 +24,7 @@ class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun infoBind(list: List<ContentsListModel.Info>) {
         text1.text = list[adapterPosition].restaurant_name
-        text3.text =
-            list[adapterPosition].restaurant_main_menu
+        text3.text = list[adapterPosition].restaurant_main_menu
 
         if (!list[adapterPosition].restaurant_isOpen) {
             restStatus.setBackgroundColor(Color.LTGRAY)
@@ -34,17 +32,9 @@ class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val logo = list[adapterPosition].restaurant_logo
 
-        if (logo != "noImage") {
-            val image_task = URLtoBitmapTask().apply {
-                url = URL("${logo}")
-            }
-            val bitmap: Bitmap = image_task.execute().get()
+        val urlToBitmapTask = URLtoBitmapTask()
 
-            image.setImageBitmap(bitmap)
-        } else {
-            image.setImageResource(R.drawable.default_restarant_logo)
-        }
-
+        urlToBitmapTask.imageBitmap(logo, image, true)
     }
 
     fun menuBind(list: List<ContentsListModel.Menu>) {

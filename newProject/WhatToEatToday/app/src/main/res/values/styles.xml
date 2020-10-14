@@ -23,7 +23,7 @@
     </style>
 
     <style name="RestInfoFixedText" parent="Widget.AppCompat.TextView">
-        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_width">80dp</item>
         <item name="android:textSize">18sp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>

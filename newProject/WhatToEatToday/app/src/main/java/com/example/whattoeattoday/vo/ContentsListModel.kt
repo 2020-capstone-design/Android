@@ -41,7 +41,7 @@ data class ContentsListModel (
 
 interface Service{
 
-    @GET("/restaurant/list_recommended_restaurants/{restaurant_university}&{hashtag}")
+    @GET("/restaurant/search_restaurants/{restaurant_university}&{hashtag}")
     fun requestRecommendList(@Path("restaurant_university") restaurant_university: String,
                              @Path("hashtag") hashtag: String): Call<ContentsListModel>
 
@@ -70,4 +70,5 @@ object SearchRetrofit {
 
 object ServerAccess {
     fun URL() = "https://api.todaymenu.tk"
+//    fun URL() = "http://192.168.10.68:3000"
 }

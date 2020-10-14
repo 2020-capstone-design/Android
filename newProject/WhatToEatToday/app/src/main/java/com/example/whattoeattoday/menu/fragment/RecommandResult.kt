@@ -47,7 +47,7 @@ class RecommandResult : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         SharedPreference.init(this)
-        SearchRetrofit.getService().requestRecommendList(SharedPreference.universalName, "치킨").enqueue(object: retrofit2.Callback<ContentsListModel> {
+        SearchRetrofit.getService().requestRecommendList(SharedPreference.universalName, "메뉴").enqueue(object: retrofit2.Callback<ContentsListModel> {
 
             override fun onFailure(call: Call<ContentsListModel>, t: Throwable) {
                 toast("실패 : $t")
@@ -57,7 +57,6 @@ class RecommandResult : AppCompatActivity() {
                 recyclerView.visibility = GONE
                 textView.visibility = VISIBLE
                 imageView.visibility = GONE
-
             }
 
             override fun onResponse(
@@ -67,6 +66,8 @@ class RecommandResult : AppCompatActivity() {
                 toast("서버 연결 성공 +${SharedPreference.universalName}")
 
                 val data = response.body()
+
+                println("-------------------------------------------- $data")
 
                 if(response.code() == 200) {
                     println("200")

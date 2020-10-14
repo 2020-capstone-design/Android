@@ -3,6 +3,7 @@
     package="com.example.whattoeattoday">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".menu.fragment.SearchResult"></activity>
+        <activity android:name=".menu.fragment.SearchResult" />
         <activity
             android:name=".menu.fragment.CategoryRestaurantInformation"
             android:theme="@style/noActionBar" />
@@ -38,6 +39,10 @@
         <activity
             android:name=".SelectUniv"
             android:theme="@style/noActionBar" />
+
+
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="df2739a98dc977c1e862602548c72765"/>
+
     </application>
 
 </manifest>
